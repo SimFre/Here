@@ -46,33 +46,30 @@ foreach($folk as $c => $person) {
 }
 
 
+
+
 // $output[row][cel] = person
-
-
-
-?><!doctype html>
-<html class="no-js" lang="en">
+?><!DOCTYPE html>
+<html lang="en">
  <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Attendence</title>
-  <link rel="stylesheet" href="css/foundation.css" type="text/css" />
-  <link rel="stylesheet" href="css/custom.css" type="text/css" />
-  <link rel="stylesheet" href="css/bgbox.css" type="text/css" />
-  <script src="js/vendor/modernizr.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Palidor: Attendence</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
  </head>
  <body>
+   <ul class="nav nav-tabs" id="departments">
+    <? for ($i = "A"; $i <= "Z"; $i++): ?>
+     <li role="presentation" class=""><a href="#<?= $i ?>"><?= $i ?></a></li>
+    <? endfor ?>
+   </ul>   
   
-  <ul class="row panel" id="departments">
-   <li class="small-1 column"><a href="#login-box" class="login-open">A</li>
-   <li class="small-1 column"><a href="#" data-reveal-id="myModal">B</a></li>
-   <li class="small-1 column">C</li>
-   <li class="small-1 column">D</li>
-   <li class="small-1 column">E</li>
-   <li class="small-1 column end">...</li>
-  </ul>   
+  <h1>Palidor: Attendence</h1>
 
-  <div class="row panel">
+  <div class="row">
    <? foreach($personList as $personRow): ?>
     <div class="row">
      <? foreach($personRow as $person): ?>
@@ -88,8 +85,6 @@ foreach($folk as $c => $person) {
    <? endforeach; ?>
   </div>
 
-<a href="#" >Click Me For A Modal</a>
-
   <div id="userDetails" class="reveal-modal small" data-reveal>
    <div class="row"></div> 
     <h2>Information</h2>
@@ -98,8 +93,8 @@ foreach($folk as $c => $person) {
     Gubben Grön
    </p>
    <p>
-    nils.andersson@thermofisher.com<br />
-    031-352 32 00
+    nils.andersson@example.com<br />
+    031-123456789
    </p>
    <a class="close-reveal-modal">&#215;</a>
   </div>
@@ -121,16 +116,8 @@ foreach($folk as $c => $person) {
    </fieldset>
   </div>
 
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/foundation.min.js"></script>
-<!--
-  <script src="js/vendor/jquery.insetBorderEffect.js"></script>
-  <script src="js/vendor/jquery.corner.js"></script>
--->
-  <script>
-   $(document).foundation();
-  </script>
-  <script src="js/custom.js"></script>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
  </body>
 </html>
